@@ -39,7 +39,7 @@ Windows에서 `python3` 명령이 없다면 `python`으로 바꾸어 실행하�
 
 ## 기본 데이터
 
-[`sample_prompts.py`](sample_prompts.py)에 바로 사용할 수 있는 기본 프롬프트 3개가 등록되어 있습니다. 사용자가 받은 자료는 이 미션 PDF뿐이므로, PDF의 예시를 참고해 새로 작성했습니다. **이 프롬프트를 이전 미션에서 작성한 기록으로 주장할 수는 없습니다.** 각 항목은 `title`, `content`, `category`, `favorite` 값을 포함합니다.
+프로그램 시작 시 [`sample_prompts.py`](sample_prompts.py)의 프롬프트 3개가 기본 등록됩니다. 등록된 프롬프트는 블로그 글 작성 도우미(텍스트 생성), 제품 썸네일 이미지(이미지 생성), Python 기초 학습 코치(페르소나)입니다. 각 항목은 `title`, `content`, `category`, `favorite` 값을 포함합니다.
 
 ## Git 기록과 제출
 
