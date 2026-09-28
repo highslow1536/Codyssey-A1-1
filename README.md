@@ -49,12 +49,12 @@ Windows에서 `python3` 명령이 없다면 `python`으로 바꾸어 실행하�
 git log --oneline --graph --all
 ```
 
-GitHub 저장소를 만든 뒤 다음 명령으로 연결하고 업로드할 수 있습니다.
+GitHub 저장소: https://github.com/highslow1536/Codyssey-A1-1
+
+현재 프로젝트는 `origin`에 연결되어 있습니다. 이후 변경사항은 다음 명령으로 업로드하고 동기화할 수 있습니다.
 
 ```bash
-git remote add origin <본인의-GitHub-저장소-URL>
-git push -u origin main
-git push origin feature/prompt-list
+git push origin main
 git pull origin main
 ```
 
