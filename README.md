@@ -49,7 +49,7 @@ Windows에서 `python3` 명령이 없다면 `python`으로 바꾸어 실행하�
 git log --oneline --graph --all
 ```
 
-GitHub 저장소: https://github.com/highslow1536/Codyssey-A1-1
+GitHub 저장소: [highslow1536/Codyssey-A1-1](https://github.com/highslow1536/Codyssey-A1-1)
 
 현재 프로젝트는 `origin`에 연결되어 있습니다. 이후 변경사항은 다음 명령으로 업로드하고 동기화할 수 있습니다.
 
@@ -58,4 +58,42 @@ git push origin main
 git pull origin main
 ```
 
-제출할 때 GitHub 저장소 URL과 개발 환경 화면(VSCode Python 확장, `python3 --version`, `git --version`, `git config --list`), 프로그램 실행 화면(메뉴, 추가, 목록, 검색), `git log --oneline --graph --all` 화면을 캡처하세요. VSCode의 GitHub 계정 로그인은 본인 계정에서 확인해야 합니다.
+## 제출 증빙 화면
+
+### 개발 환경
+
+**1. VSCode Python 확장 설치** — Microsoft의 Python 확장에 `Uninstall` 버튼이 표시됩니다.
+
+![VSCode Python 확장 설치 화면](screenshots/01-vscode-python-extension.png)
+
+**2. Python 버전** — `python3 --version` 실행 결과입니다.
+
+![Python 버전 확인 화면](screenshots/02-python-version.png)
+
+**3. Git 버전과 사용자 설정** — `git --version`, `git config user.name`, `git config user.email` 실행 결과입니다.
+
+![Git 버전과 사용자 설정 확인 화면](screenshots/03-git-configuration.png)
+
+### 프로그램 실행
+
+**4. 시작 메뉴** — `python3 prompt_manager.py` 실행 화면입니다.
+
+![프롬프트 관리 프로그램 메뉴 화면](screenshots/04-program-menu.png)
+
+**5. 새 프롬프트 추가** — 제목, 내용, 카테고리를 입력해 등록한 화면입니다.
+
+![새 프롬프트 추가 완료 화면](screenshots/05-add-prompt.png)
+
+**6. 전체 목록** — 기본 프롬프트 3개와 새로 추가한 프롬프트가 보입니다.
+
+![전체 프롬프트 목록 화면](screenshots/06-prompt-list.png)
+
+**7. 키워드 검색** — 추가한 프롬프트를 `제주도`로 검색한 결과입니다.
+
+![키워드 검색 결과 화면](screenshots/07-search-prompt.png)
+
+### Git 이력
+
+**8. 커밋과 브랜치 병합** — `git log --oneline --graph --all` 실행 결과입니다.
+
+![Git 커밋과 브랜치 병합 기록 화면](screenshots/08-git-log.png)
