@@ -84,6 +84,25 @@ Windows에서 `python3` 명령이 없다면 `python`으로 바꾸어 실행하�
 
 목록 출력은 다른 메뉴와 독립된 기능이라 `feature/prompt-list` 브랜치에서 작업했습니다. 목록 함수와 메뉴 연결을 완성해 커밋한 뒤 `main`으로 돌아와 `merge --no-ff`로 병합했습니다. 이 방식은 기능 브랜치의 작업과 병합 시점을 그래프에 남깁니다. 이후 작은 기능은 `main`에서 각각 기능 단위로 커밋했습니다. 다음 명령으로 실제 병합 기록을 확인할 수 있습니다.
 
+실제로 사용한 브랜치 체크아웃과 병합 명령은 다음과 같습니다.
+
+```bash
+git checkout -b feature/prompt-list
+# 목록 기능을 구현하고 e955722 커밋 생성
+git checkout main
+git merge --no-ff feature/prompt-list -m 'Merge prompt list feature'
+```
+
+로컬 `git reflog`에 남은 **체크아웃 기록**은 아래와 같습니다. `reflog`는 로컬 기록이므로 새로 복제한 저장소에는 이 출력이 그대로 남지 않습니다.
+
+```text
+$ git reflog --date=iso --all --grep-reflog='checkout:' --format='%h %gd %gs'
+8fdc1c7 HEAD@{2026-09-28 13:04:36 +0900} checkout: moving from feature/prompt-list to main
+8fdc1c7 HEAD@{2026-09-28 13:04:13 +0900} checkout: moving from main to feature/prompt-list
+```
+
+`e955722`은 기능 브랜치에서 만든 목록 기능 커밋이고, `bfcbd56`은 이를 `main`에 합친 병합 커밋입니다. 아래 그래프 명령과 제출 증빙 화면 8번에서도 두 커밋의 연결을 확인할 수 있습니다.
+
 ```bash
 git log --oneline --graph --all
 ```
