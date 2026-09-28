@@ -39,7 +39,7 @@ Windows에서 `python3` 명령이 없다면 `python`으로 바꾸어 실행하�
 
 ## 기본 데이터
 
-[`sample_prompts.py`](sample_prompts.py)에 시연용 프롬프트 3개가 등록되어 있습니다. **이전 미션에서 작성한 실제 프롬프트가 제공되지 않아 예시로 채웠습니다. 제출 전 자신의 프롬프트 3개 이상으로 교체해야 해당 조건을 충족합니다.** 각 항목은 `title`, `content`, `category`, `favorite` 값을 포함합니다.
+[`sample_prompts.py`](sample_prompts.py)에 바로 사용할 수 있는 기본 프롬프트 3개가 등록되어 있습니다. 사용자가 받은 자료는 이 미션 PDF뿐이므로, PDF의 예시를 참고해 새로 작성했습니다. **이 프롬프트를 이전 미션에서 작성한 기록으로 주장할 수는 없습니다.** 각 항목은 `title`, `content`, `category`, `favorite` 값을 포함합니다.
 
 ## Git 기록과 제출
 
