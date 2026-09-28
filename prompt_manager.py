@@ -100,6 +100,16 @@ def show_detail(prompts):
     print(prompt["content"])
 
 
+def toggle_favorite(prompts):
+    print("\n=== 즐겨찾기 관리 ===")
+    prompt = choose_prompt(prompts)
+    if prompt is None:
+        return
+    prompt["favorite"] = not prompt["favorite"]
+    action = "추가" if prompt["favorite"] else "해제"
+    print(f'"{prompt["title"]}" 즐겨찾기를 {action}했습니다.')
+
+
 def show_menu():
     print("\n=== 나만의 프롬프트 관리 ===")
     print("1. 프롬프트 추가")
@@ -107,6 +117,7 @@ def show_menu():
     print("3. 카테고리별 조회")
     print("4. 프롬프트 검색")
     print("5. 프롬프트 상세 보기")
+    print("6. 즐겨찾기 관리")
     print("0. 종료")
 
 
@@ -128,6 +139,8 @@ def main():
             search_prompt(prompts)
         elif choice == "5":
             show_detail(prompts)
+        elif choice == "6":
+            toggle_favorite(prompts)
         else:
             print("올바른 메뉴 번호를 입력해주세요.")
 
