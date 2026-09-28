@@ -38,9 +38,21 @@ def add_prompt(prompts):
     print("프롬프트가 추가되었습니다!")
 
 
+def show_list(prompts):
+    print("\n=== 프롬프트 목록 ===")
+    if not prompts:
+        print("등록된 프롬프트가 없습니다.")
+        return
+    for number, prompt in enumerate(prompts, 1):
+        star = " ⭐" if prompt["favorite"] else ""
+        print(f'{number}. [{prompt["category"]}] {prompt["title"]}{star}')
+    print(f"총 {len(prompts)}개의 프롬프트")
+
+
 def show_menu():
     print("\n=== 나만의 프롬프트 관리 ===")
     print("1. 프롬프트 추가")
+    print("2. 프롬프트 목록")
     print("0. 종료")
 
 
@@ -54,6 +66,8 @@ def main():
             break
         if choice == "1":
             add_prompt(prompts)
+        elif choice == "2":
+            show_list(prompts)
         else:
             print("올바른 메뉴 번호를 입력해주세요.")
 
