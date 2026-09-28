@@ -80,12 +80,33 @@ def search_prompt(prompts):
         print("검색 결과가 없습니다.")
 
 
+def choose_prompt(prompts):
+    answer = input("프롬프트 번호: ").strip()
+    if not answer.isdecimal() or not 1 <= int(answer) <= len(prompts):
+        print("올바른 프롬프트 번호를 입력해주세요.")
+        return None
+    return prompts[int(answer) - 1]
+
+
+def show_detail(prompts):
+    print("\n=== 프롬프트 상세 보기 ===")
+    prompt = choose_prompt(prompts)
+    if prompt is None:
+        return
+    print(f'제목: {prompt["title"]}')
+    print(f'카테고리: {prompt["category"]}')
+    print(f'즐겨찾기: {"⭐" if prompt["favorite"] else "아니요"}')
+    print("내용:")
+    print(prompt["content"])
+
+
 def show_menu():
     print("\n=== 나만의 프롬프트 관리 ===")
     print("1. 프롬프트 추가")
     print("2. 프롬프트 목록")
     print("3. 카테고리별 조회")
     print("4. 프롬프트 검색")
+    print("5. 프롬프트 상세 보기")
     print("0. 종료")
 
 
@@ -105,6 +126,8 @@ def main():
             show_category(prompts)
         elif choice == "4":
             search_prompt(prompts)
+        elif choice == "5":
+            show_detail(prompts)
         else:
             print("올바른 메뉴 번호를 입력해주세요.")
 
