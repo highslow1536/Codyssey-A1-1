@@ -65,11 +65,27 @@ def show_category(prompts):
         print("해당 카테고리에 프롬프트가 없습니다.")
 
 
+def search_prompt(prompts):
+    print("\n=== 프롬프트 검색 ===")
+    keyword = read_nonempty("검색어").casefold()
+    found = 0
+    for number, prompt in enumerate(prompts, 1):
+        if keyword in prompt["title"].casefold() or keyword in prompt["content"].casefold():
+            star = " ⭐" if prompt["favorite"] else ""
+            print(f'{number}. [{prompt["category"]}] {prompt["title"]}{star}')
+            found += 1
+    if found:
+        print(f"{found}개의 프롬프트를 찾았습니다.")
+    else:
+        print("검색 결과가 없습니다.")
+
+
 def show_menu():
     print("\n=== 나만의 프롬프트 관리 ===")
     print("1. 프롬프트 추가")
     print("2. 프롬프트 목록")
     print("3. 카테고리별 조회")
+    print("4. 프롬프트 검색")
     print("0. 종료")
 
 
@@ -87,6 +103,8 @@ def main():
             show_list(prompts)
         elif choice == "3":
             show_category(prompts)
+        elif choice == "4":
+            search_prompt(prompts)
         else:
             print("올바른 메뉴 번호를 입력해주세요.")
 
