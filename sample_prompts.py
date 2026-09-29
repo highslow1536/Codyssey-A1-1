@@ -15,6 +15,7 @@ def load_sample_prompts():
             ),
             "category": "텍스트 생성",
             "favorite": False,
+            "view_count": 0,
         },
         {
             "title": "제품 썸네일 이미지",
@@ -28,6 +29,7 @@ def load_sample_prompts():
             ),
             "category": "이미지 생성",
             "favorite": False,
+            "view_count": 0,
         },
         {
             "title": "Python 기초 학습 코치",
@@ -40,5 +42,6 @@ def load_sample_prompts():
             ),
             "category": "페르소나",
             "favorite": False,
+            "view_count": 0,
         },
     ]
